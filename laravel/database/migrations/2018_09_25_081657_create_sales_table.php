@@ -18,10 +18,10 @@ class CreateSalesTable extends Migration
             $table->string('offer_numbers');
             $table->integer('offer_status');
             $table->boolean('prospect');
-            $table->timestamps('date_of_action');
-            $table->timestamps('last_contact_data');
-            $table->timestamps('next_action');
-            $table->increments('sale_percentage');
+            $table->datetime('date_of_action');
+            $table->datetime('last_contact_data');
+            $table->datetime('next_action');
+            $table->integer('sale_percentage');
             $table->boolean('creditworthy');
             $table->integer('costumer_number');
             $table->timestamps();

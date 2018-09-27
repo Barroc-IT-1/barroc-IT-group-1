@@ -1,6 +1,5 @@
 html, body {
     background-color: #fff;
-    font-family: Arial;
     font-weight: 200;
     width: 1280px;
     margin: 0 auto;
@@ -44,7 +43,13 @@ html, body {
 }
 /*-------------------------------Loginpage---------------------------*/
 .navbar-brand{
-    
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem;
+}
+.navbar-nav{
+    display:flex;
+    justify-content: space-around;
 }
 
 
