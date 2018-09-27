@@ -5,92 +5,61 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Home</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}"/>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+    <div class="header">
+        <div class="headersection">
+            <div class="headerlogo">
+                <h1>Barroc-IT</h1>
+            </div>
+            <div class="headernav">
+                <a href="/index">Home</a>
+                <a href="/index">Services</a>
+                <a href="/index">Dashboard</a>
+                <a href="/index">Contact</a>
+                <a href="/login">Login</a>
             </div>
         </div>
+    </div>
+
+    <div class="beforecontent">
+        <h2>Big welcome to you!</h2>
+        <p>BARROC IT offers top notch software solutions on demand.</p>
+        <p>From mainframe to cloud to mobile, BARROC IT helps thousands of businesses around the world manage complex technology to deliver extraordinary business performance.</p>
+    </div>
+
+    <div class="content">
+        <div class="contentleft">
+            <h2>Latest news</h2>
+            <h3>hightech CMS for BARROC IT by Radius College</h3>
+            <p>The elite students of the Radius College Development School in Breda has been offered a 'once-in-a-lifetime' chance to deliver a extended CMS system for BARROC IT. Can they pull it off?</p>
+            <h3>Agile vs. Waterfall: Evaluating the Pros and Cons</h3>
+            <p>Agile (scrum) and Waterfall are two distinct methods of software development. The Waterfall method cas essentially be described as a linear model of software design.</p>
+            <h3>Teaching students to properly plan... In 5 steps</h3>
+            <p>For most students it seems like applying proper planning is a myth. Here's the five simple steps we take at BARROC IT to easily achieve a proper planning for each and every project.</p>
+        </div>
+        <div class="contentright">
+            <h2>Some of our topservices</h2>
+            <div class="contentsections">
+                <div class="contentright_left">
+                    <h3>"Administration done right"</h3>
+                    <p>The elite students of the Radius College Development School in Breda has been offered a 'once-in-a-lifetime' chance to deliver a extended CMS system for BARROC IT. Can they pull it off?</p>
+                </div>
+                <div class="contentright_right">
+                    <h3>“Way better than Comtak”</h3>
+                    <p>The elite students of the Radius College Development School in Breda has been offered a 'once-in-a-lifetime' chance to deliver a extended CMS system for BARROC IT. Can they pull it off?</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
     </body>
 </html>
