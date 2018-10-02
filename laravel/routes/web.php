@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/sales', '\App\Http\Controllers\SalesController@index')->name('sales');
+Route::post('/sales', array('uses'=>'SalesController@index'));
+Route::get('/addcost', array('uses'=>'AddcostController@'));
