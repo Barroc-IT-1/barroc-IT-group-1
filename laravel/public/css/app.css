@@ -45,16 +45,76 @@ html, body {
 .navbar-brand{
     text-decoration: none;
     color: #000;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 .navbar-nav{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
+.nav-link{
+    text-decoration: none;
+    color: #000;
 
-
-
-
+}
+.navbar-nav_ml-auto{
+    display:flex;
+    text-decoration: none;
+}
+.nav-item{
+   margin-left: 50px;
+   list-style: none;
+}
+.testdiv{
+    display:flex;
+    justify-content: space-between;
+}
+.card-header{
+    width:300px;
+    margin: 0 auto;
+}
+.card-body{
+    width:300px;
+    margin: 0 auto;
+}
+#email, #password, #name, #password-confirm{
+    border-radius: 10px;
+    width:400px;
+    height:30px;
+}
+.col-md-8_offset-md-4{
+    text-align: center;
+    width:380px;
+    margin-top: 20px;
+}
+.btn_btn-primary{
+    width:100px;
+    height:22px;
+    border-radius: 10px;
+}
+.btn_btn-primary_2{
+    width:100px;
+    height:22px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 140px;
+}
+.btn_btn-link{
+    margin-top: 20px;
+    display:block;
+    text-align: right;
+    width: 400px;
+    color: #000;
+}
+/*----------login_succes_page------------*/
+.card-header2{
+    margin-top: 50px;
+}
+.nav-item_dropdown{
+    display:flex;
+}
+#navbarDropdown{
+    margin-right: 40px;
+}
 
 
 

@@ -25,16 +25,17 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <div class="testdiv">
                     <h1>Barroc-IT</h1>
                 </a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse_navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav_ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -46,8 +47,9 @@
                                 @endif
                             </li>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                            <li class="nav-item_dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
