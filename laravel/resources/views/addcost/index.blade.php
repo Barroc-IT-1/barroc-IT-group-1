@@ -8,7 +8,7 @@
     <title>Sales</title>
 </head>
 <body>
-<form action="AddcostController" method="post">
+<form action="" method="post">
     {{ csrf_field() }}
     <input type="text" name="name" placeholder="name">
     <input type="text" name="lastname" placeholder="last name">
