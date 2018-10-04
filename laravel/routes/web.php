@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::get('/sales', '\App\Http\Controllers\SalesController@index')->name('sales');
+Route::get('/sales', '\App\Http\Controllers\SalesController@index');
 Route::post('/sales', array('uses'=>'SalesController@index'));
 Route::get('/addcost', array('uses'=>'AddcostController@'));

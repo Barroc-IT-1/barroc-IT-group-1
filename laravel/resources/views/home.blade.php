@@ -14,7 +14,8 @@
                         </div>
                     @endif
                         @foreach($customer as $customers)
-                          <p>{{$customers->name}}</p>
+                            <h3>Costumer information Finance:</h3>
+                            <p>{{$customers->id}}</p>
                         @endforeach
                 </div>
             </div>
