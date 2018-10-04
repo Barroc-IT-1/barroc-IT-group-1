@@ -1,27 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sales</title>
-</head>
-<body>
-<form action="/SalesConntroller" method="post">
-    {{ csrf_field() }}
-    <input type="text" name="offernumber" placeholder="offernumber">
-    <input type="number" name="offerstatus" placeholder="offerstatus">
-    <input type="text" name="prospect" placeholder="prospect">
-    <input type="text" name="dateofaction" placeholder="dateofaction">
-    <input type="text" name="lastcontactdata" placeholder="lastcontactdata">
-    <input type="text" name="nextaction" placeholder="nextaction">
-    <input type="text" name="salepercentage" placeholder="salepercentage">
-    <input type="text" name="creditworthy" placeholder="creditworthy">
-    <input type="text" name="customernumber" placeholder="customernumber">
-    <input type="submit" value="submit">
+@extends('layouts.app')
 
-</form>
+@section('content')
 
-</body>
-</html>
+    @foreach($sales as $sales2)
+        <h3>Costumer information Sales:</h3>
+        <p>{{$sales2->offer_numbers}}<br>{{$sales2->offer_status }}<br>{{$sales2->prospect }}<br>{{$sales2->date_of_action }}<br>{{$sales2->last_contact_data }}<br>
+            {{$sales2->next_action }}<br>{{$sales2->sale_percentage }}<br>{{$sales2->creditworthy }}<br>{{$sales2->costumer_number}}</p>
+    @endforeach
+
+@endsection
