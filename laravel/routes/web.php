@@ -24,3 +24,4 @@ Route::get('/finance', '\App\Http\Controllers\FinanceController@index');
 Route::get('/development', '\App\Http\Controllers\DevelopmentController@index');
 Route::post('/sales', array('uses'=>'SalesController@index'));
 Route::get('/addcost', array('uses'=>'AddcostController@'));
+
