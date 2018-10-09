@@ -13,13 +13,33 @@ class DepartmentMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
+
     public function handle($request, Closure $next, $guard = null)
+
     {
-        if (Auth::guard($guard)->check()) {
+      /*  if (Auth::guard($guard)->check()) {
+            return redirect('/');
+
+        } */
+
+        if  (Auth::user()->roles = 'sales'){
+
             return redirect('/sales');
+
         }
 
+        elseif  (Auth::user()->roles = 'development'){
+
+            return redirect('/development');
+
+        }
+
+        elseif  (Auth::user()->roles = 'finance'){
+
+            return redirect('/finance');
+
+        }
         return $next($request);
     }
-    
+
 }
