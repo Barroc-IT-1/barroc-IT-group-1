@@ -2,19 +2,43 @@
 
 @section('content')
 
-    @foreach($sales as $sales2)
+    {!! Form::open(array('url' => 'sales/search', 'class'=>'form navbar-form navbar-right searchform')) !!}
+    {!! Form::text('search', null,
+                           array('required',
+                                'class'=>'form-control',
+                                'placeholder'=>'Search for customers...')) !!}
+    {!! Form::submit('Search',
+                               array('class'=>'btn btn-default')) !!}
+    {!! Form::close() !!}
+
+    @foreach($customers as $customer2)
         <h3>Costumer information Sales:</h3>
-        <ul>
-            <li>{{$sales2->offer_numbers}}</li>
-            <li>{{$sales2->offer_status }}</li>
-            <li>{{$sales2->prospect }}</li>
-            <li>{{$sales2->date_of_action }}</li>
-            <li>{{$sales2->last_contact_data }}</li>
-            <li>{{$sales2->next_action }}</li>
-            <li>{{$sales2->sale_percentage }}</li>
-            <li>{{$sales2->creditworthy }}</li>
-            <li>{{$sales2->costumer_number}}</li>
-        </ul>
+        <div class="customer_left_list">
+            <ul>
+                <li>First-Name: {{$customer2->name}}</li>
+                <li>Last-name:  {{$customer2->last_name}}</li>
+                <li>Adress:     {{$customer2->address}}</li>
+                <li>Zipcode:    {{$customer2->zipcode}}</li>
+                <li>Residence:  {{$customer2->residence}}</li>
+                <li>Tel_number: {{$customer2->tel_number}}</li>
+                <li>Fax_number: {{$customer2->fax_number}}</li>
+                <li>Email:      {{$customer2->email}}</li>
+                <li>Company:    {{$customer2->company}}</li>
+            </ul>
+        </div>
+        <div class="customer_left_list">
+            <ul>
+                <li>First-Name: {{$customer2->name}}</li>
+                <li>Last-name:  {{$customer2->last_name}}</li>
+                <li>Adress:     {{$customer2->address}}</li>
+                <li>Zipcode:    {{$customer2->zipcode}}</li>
+                <li>Residence:  {{$customer2->residence}}</li>
+                <li>Tel_number: {{$customer2->tel_number}}</li>
+                <li>Fax_number: {{$customer2->fax_number}}</li>
+                <li>Email:      {{$customer2->email}}</li>
+                <li>Company:    {{$customer2->company}}</li>
+            </ul>
+        </div>
 
     @endforeach
 
