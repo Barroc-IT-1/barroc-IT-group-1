@@ -22,7 +22,7 @@ class CreateFinanceTable extends Migration
             $table->integer('limiet');
             $table->integer('grootboekrekening');
             $table->integer('btw_code');
-            $table->integer('customer_nummer');
+            $table->integer('customer_id')->unsigned();
             $table->timestamps();
 
         });

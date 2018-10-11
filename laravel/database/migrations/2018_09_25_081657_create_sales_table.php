@@ -23,7 +23,7 @@ class CreateSalesTable extends Migration
             $table->datetime('next_action');
             $table->integer('sale_percentage');
             $table->boolean('creditworthy');
-            $table->integer('costumer_number');
+            $table->integer('customer_id')->unsigned();
             $table->timestamps();
         });
     }

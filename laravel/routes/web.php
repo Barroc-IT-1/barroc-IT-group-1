@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/sales', '\App\Http\Controllers\SalesController@index');
+Route::post('/sales/search', '\App\Http\Controllers\SalesController@search');
+
+
+Route::get('/finance', '\App\Http\Controllers\FinanceController@index');
+Route::get('/development', '\App\Http\Controllers\DevelopmentController@index');
 Route::post('/sales', array('uses'=>'SalesController@index'));
 Route::get('/addcost', array('uses'=>'AddcostController@'));
