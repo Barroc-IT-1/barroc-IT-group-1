@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,11 +9,11 @@
 </head>
 <body>
 
-=======
+
 @extends('layouts.app')
 
 @section('content')
->>>>>>> master
+
 
     {!! Form::open(array('url' => 'sales/search', 'class'=>'form navbar-form navbar-right searchform')) !!}
     {!! Form::text('search', null,

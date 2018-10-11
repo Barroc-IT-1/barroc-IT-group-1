@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/addcost', function () {
+    return view('addcost/index');
+});
 
 Auth::routes();
 
@@ -27,4 +30,4 @@ Route::post('/sales/search', '\App\Http\Controllers\SalesController@search');
 Route::get('/finance', '\App\Http\Controllers\FinanceController@index');
 Route::get('/development', '\App\Http\Controllers\DevelopmentController@index');
 Route::post('/sales', array('uses'=>'SalesController@index'));
-Route::get('/addcost', array('uses'=>'AddcostController@'));
+Route::post('/addcost/1', ('AddcostController@insert'));
