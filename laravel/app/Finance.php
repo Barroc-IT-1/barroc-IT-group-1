@@ -12,4 +12,8 @@ class Finance extends Model
     {
         return $this->hasOne('App\Customer');
     }
+    public function scopeSearch($q)
+    {
+        return empty(request()->search) ? $q : $q->where('name', 'like', '%'.request()->search.'%');
+    }
 }

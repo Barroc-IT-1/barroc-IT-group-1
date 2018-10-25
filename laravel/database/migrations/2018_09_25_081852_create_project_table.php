@@ -18,6 +18,7 @@ class CreateProjectTable extends Migration
             $table->boolean('ongoing');
             $table->boolean('done');
             $table->integer('costumer_number');
+            $table->integer('customer_id');
             $table->timestamps();
         });
     }

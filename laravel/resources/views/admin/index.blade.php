@@ -15,7 +15,8 @@
             <li>{{$sales2->creditworthy }}</li>
             <li>{{$sales2->costumer_number}}</li>
         </ul>
-
+        <a href = '/delete/{{ $customer2->id }}' class="delete_btn">Delete</a>
+        <a href = '/edit/{{ $customer2->id }}'class="delete_btn">Update</a>
     @endforeach
 
 @endsection

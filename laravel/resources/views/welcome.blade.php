@@ -20,9 +20,6 @@
             </div>
             <div class="headernav">
                 <a href="/index">Home</a>
-                <a href="/index">Services</a>
-                <a href="/index">Dashboard</a>
-                <a href="/index">Contact</a>
                 <a href="/login">Login</a>
             </div>
         </div>

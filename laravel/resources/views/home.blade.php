@@ -5,19 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header2"><h2>Dashboard</h2></div>
+                <a href="/sales">Sales</a>
+                <a href="/finance">Finance</a>
+                <a href="/development">Development</a>
 
-                <div class="card-body2">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                        @foreach($customer as $customers)
-                            <h3>Costumer information Finance:</h3>
-                            <p>{{$customers->id}}</p>
-                        @endforeach
-                </div>
             </div>
         </div>
     </div>
