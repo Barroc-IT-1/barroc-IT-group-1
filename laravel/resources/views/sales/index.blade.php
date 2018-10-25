@@ -1,8 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sales</title>
+</head>
+<body>
+
+
 @extends('layouts.app')
 
 @section('content')
 
+<<<<<<< HEAD
     {!! Form::open(array('url' => 'sales/search', 'class'=>'form_navbar-form_navbar-right_searchform')) !!}
+=======
+
+    {!! Form::open(array('url' => 'sales/search', 'class'=>'form navbar-form navbar-right searchform')) !!}
+>>>>>>> master
     {!! Form::text('search', null,
                            array('required',
                                 'class'=>'form-control',

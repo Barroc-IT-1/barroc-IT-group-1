@@ -30,6 +30,10 @@ class AddcostController extends Controller
 
         ]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
         return redirect('addcost');
     }
     public function update(request $request, $id)

@@ -49,6 +49,9 @@ Route::group(['middleware' => 'auth'],function(){
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/addcost', function () {
+    return view('addcost/index');
+});
 
 Route::get('/addcost', function () {
     return view('addcost/index');
@@ -64,3 +67,10 @@ Route::post('/addcost/2', ('FinanceController@insert2'));
 Route::post('/addcost/3', ('SalesController@insert3'));
 Route::post('/addcost/4', ('DevelopmentController@insert4'));
 
+<<<<<<< HEAD
+=======
+Route::get('/finance', '\App\Http\Controllers\FinanceController@index');
+Route::get('/development', '\App\Http\Controllers\DevelopmentController@index');
+Route::post('/sales', array('uses'=>'SalesController@index'));
+Route::post('/addcost/1', ('AddcostController@insert'));
+>>>>>>> master
