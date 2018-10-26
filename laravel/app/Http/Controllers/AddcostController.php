@@ -9,12 +9,13 @@ use App\Http\Controllers\Controller;
 
 class AddcostController extends Controller
 {
+    //hier word de inlogform gemaakt
     public function create()
     {
         if(!Auth::user()->Check(1))return redirect()->action('\App\Http\Controllers\Auth\LoginController@showLoginForm');
         return view('sales.index');
     }
-
+//met deze methode kun je customers toegvoegen
     public function insert(request $request)
     {
         DB::Table('customers')->insert([
@@ -29,7 +30,9 @@ class AddcostController extends Controller
             'company' => $request->company,
 
         ]);
+        return redirect('addcost');
     }
+    //met deze methode verwijder je de klant
     public function destroy($id)
     {
         DB::table('customers')->where('id', $id)->delete();
@@ -41,6 +44,7 @@ class AddcostController extends Controller
         return view('sales\edit')
             ->with('id', $id);
     }
+    //met deze methode word de klant geupdated
     public function update($id, request $request)
     {
         $customer= Customer::find($id);

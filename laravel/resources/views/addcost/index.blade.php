@@ -11,6 +11,7 @@
                     <div class="items">
                         <div class="addform">
                             <h2>Add Customer</h2>
+                            {{--dit is de form om de customers toe te voegen--}}
                             <form action="{{ url('/addcost/1') }}" method="post" class="form2">
                                 {{ csrf_field() }}
                                 <input type="text" name="name" placeholder="name">
@@ -27,6 +28,7 @@
                         </div>
                         <div class="addform">
                             <h2>Add Finance</h2>
+                            {{--dit is de form om de finance data toe te voegen--}}
                             <form action="{{ url('/addcost/2') }}" method="post" class="form2">
                                 {{ csrf_field() }}
                                 <input type="text" name="bankrekening" placeholder="bankrekeningnummer">
@@ -42,6 +44,7 @@
                         </div>
                         <div class="addform">
                             <h2>Add Sales</h2>
+                            {{--dit is de form om de sales data toe te voegen--}}
                             <form action="{{ url('/addcost/3') }}" method="post" class="form2">
                                 {{ csrf_field() }}
                                 <input type="text" name="offernumbers" placeholder="offer numbers">
@@ -58,6 +61,7 @@
                         </div>
                         <div class="addform">
                             <h2>Add Development</h2>
+                            {{--dit is de form om de development data toe te voegen--}}
                             <form action="{{ url('/addcost/4') }}" method="post" class="form2">
                                 {{ csrf_field() }}
                                 <input type="text" name="maintanancecontract" placeholder="maintanance contract">

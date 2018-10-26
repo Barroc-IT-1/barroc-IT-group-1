@@ -23,7 +23,7 @@
                     <div class="items">
                         <div class="addform">
                             <h2>edit Customer {{$id}}</h2>
-
+                        {{--dit zijn alle forms die we gebruiken om customers aan te passen--}}
                             <form action="/edit/{{$id}}" method="post">
                                 {{ method_field('PUT') }}
                                 {{ csrf_field() }}
