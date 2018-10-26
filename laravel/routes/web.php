@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/sales',function (){
         return view('sales/index');
     })->name('sales');
+
     Route::post('/sales/search', '\App\Http\Controllers\SalesController@search');
 
     Route::get('/finance',function (){
@@ -57,9 +58,12 @@ Route::get('/addcost', function () {
     return view('addcost/index');
 });
 
-Route::get('/delete/{id}', '\App\Http\Controllers\SalesController@destroy');
-Route::get('/edit/{id}', '\App\Http\Controllers\SalesController@edit');
-Route::put('/edit/{id}', '\App\Http\Controllers\salesController@update')->name('sales.update');
+Route::get('/delete/{id}', '\App\Http\Controllers\addcostController@destroy');
+Route::get('/edit/{id}', '\App\Http\Controllers\addcostController@edit');
+Route::put('/edit/{id}', '\App\Http\Controllers\AddcostController@update')->name('customer.update');
+Route::put('/edit/{id}', 'FinanceController@update')->name('finance.update');
+Route::put('/edit/{id}', 'SalesController@update')->name('sales.update');
+Route::put('/edit/{id}', 'DevelopmentController@update')->name('development.update');
 
 Auth::routes();
 Route::post('/addcost/1', ('AddcostController@insert'));
@@ -67,10 +71,9 @@ Route::post('/addcost/2', ('FinanceController@insert2'));
 Route::post('/addcost/3', ('SalesController@insert3'));
 Route::post('/addcost/4', ('DevelopmentController@insert4'));
 
-<<<<<<< HEAD
-=======
-Route::get('/finance', '\App\Http\Controllers\FinanceController@index');
-Route::get('/development', '\App\Http\Controllers\DevelopmentController@index');
+
+
+
+
 Route::post('/sales', array('uses'=>'SalesController@index'));
-Route::post('/addcost/1', ('AddcostController@insert'));
->>>>>>> master
+

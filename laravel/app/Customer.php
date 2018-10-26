@@ -18,4 +18,8 @@ class Customer extends Model
     {
         return $this->hasOne('App\Finance');
     }
+    public function users()
+    {
+        return $this->hasOne('App\Users');
+    }
 }

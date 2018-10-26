@@ -14,7 +14,7 @@ class CreateDevelopmentsForeign extends Migration
     public function up()
     {
         Schema::table('developments', function(Blueprint $table){
-            $table->foreign('customer_id')->references('id')->on('customers');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
     }
 

@@ -14,12 +14,12 @@
 
 @section('content')
 
-<<<<<<< HEAD
+
     {!! Form::open(array('url' => 'sales/search', 'class'=>'form_navbar-form_navbar-right_searchform')) !!}
-=======
+
 
     {!! Form::open(array('url' => 'sales/search', 'class'=>'form navbar-form navbar-right searchform')) !!}
->>>>>>> master
+
     {!! Form::text('search', null,
                            array('required',
                                 'class'=>'form-control',

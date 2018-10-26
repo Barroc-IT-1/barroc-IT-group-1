@@ -28,4 +28,32 @@ class FinanceController extends Controller
             ->with('customers', $customers);
 
     }
+    public function destroy($id)
+    {
+        DB::table('customers')->where('id', $id)->delete();
+
+        return redirect('sales');
+    }
+    public function edit($id)
+    {
+        return view('sales\edit')
+            ->with('id', $id);
+    }
+    public function update($id, request $request)
+    {
+
+        $customer= Finance::find($id);
+        $customer->bankrekeningnummer=$request->input('bankrekening');
+        $customer->saldo=$request->input('saldo');
+        $customer->aantal_facturen=$request->input('aantalfacturen');
+        $customer->omzetbedrag=$request->input('omzetbedrag');
+        $customer->limiet=$request->input('limiet');
+        $customer->grootboekrekening=$request->input('grootboekrekening');
+        $customer->btw_code=$request->input('btwcode');
+        $customer->customer_id=$request->input('customerid');
+        $customer->save();
+
+        return redirect('sales');
+    }
+
 }
